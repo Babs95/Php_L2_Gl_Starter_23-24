@@ -1,5 +1,6 @@
 <?php
-    include_once './header.php'
+    $index = true;
+    include_once './header.php';
 ?>
 
 <!-- Begin page content -->

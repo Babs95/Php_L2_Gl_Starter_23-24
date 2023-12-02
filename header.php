@@ -1,14 +1,13 @@
-
 <!doctype html>
 <html lang="en" class="h-100" data-bs-theme="auto">
-  <head><script src="/docs/5.3/assets/js/color-modes.js"></script>
+  <head><script src="https://getbootstrap.com/docs/5.3/assets/js/color-modes.js"></script>
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.118.2">
-    <title>Sticky Footer Navbar Template · Bootstrap v5.3</title>
+    <title>ISI HOSPITAL</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sticky-footer-navbar/">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
@@ -21,9 +20,9 @@
 <link rel="manifest" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/manifest.json">
 <link rel="mask-icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
 <link rel="icon" href="https://getbootstrap.com/docs/5.3/assets/img/favicons/favicon.ico">
-<link href="css/bootstrap.css" rel="stylesheet">
-<link href="css/style.css" rel="stylesheet">
-<link href="DataTables/datatables.min.css" rel="stylesheet">
+<link href="../../css/bootstrap.css" rel="stylesheet">
+<link href="../../css/style.css" rel="stylesheet">
+<link href="../../DataTables/datatables.min.css" rel="stylesheet">
 <meta name="theme-color" content="#712cf9">
 
 
@@ -167,20 +166,20 @@
   <!-- Fixed navbar -->
   <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">ISI HOSPITAL</a>
+      <a class="navbar-brand" href="index.php">ISI HOSPITAL</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav me-auto mb-2 mb-md-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="index.php">Accueil</a>
+            <a class="nav-link <?= !empty($index) ? "active" : "" ?>" href="index.php">Accueil</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="docteurs.php">Docteurs</a>
+            <a class="nav-link <?php echo !empty($docteur) ? "active" : "" ?>" href="../../views/docteurs/docteurs.php">Docteurs</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="patients.php">Patients</a>
+            <a class="nav-link <?php echo !empty($service) ? "active" : "" ?>" href="../../views/services/services.php">Services</a>
           </li>
         </ul>
         <form class="d-flex" role="search">
