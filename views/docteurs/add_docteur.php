@@ -2,6 +2,7 @@
 require('../../actions/docteurs/createDocteurAction.php');
 $docteur = true;
 include_once '../../header.php';
+include_once '../../navbar.php';
 include_once '../../Database/service_db.php';
 $services = getAllServices();
 ?>

@@ -1,7 +1,11 @@
 <?php
-require('../../Database/docteur_db.php');
+
 $docteur = true;
+
 include_once '../../header.php';
+exit(0);
+include_once '../../navbar.php';
+require_once '../../Database/docteur_db.php';
 
 $docteurs = getAllDocteurs();
 ?>

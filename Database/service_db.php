@@ -53,3 +53,29 @@ function deleteService($id) {
     $stmt->execute(array($id));
     $stmt->closeCursor();
 }
+
+function getOneServiceAllDocteurs($id) {
+    global $connexion;
+
+    $query = "SELECT docteurs.id, docteurs.nom, docteurs.prenom
+    FROM services
+    INNER JOIN docteurs ON services.id = docteurs.service_id
+    WHERE services.id = $id";
+    $stmt = $connexion->prepare($query);
+    $stmt->execute();
+
+    return $stmt;
+}
+
+function searchServiceByWord($word) {
+    global $connexion;
+
+    $query = 'SELECT docteurs.id, docteurs.nom, docteurs.prenom, docteurs.email, docteurs.adresse, docteurs.tel
+    , services.libelle as service_libelle
+    FROM services 
+    INNER JOIN docteurs ON services.id = docteurs.service_id
+    WHERE services.libelle LIKE "%'.$word.'%" ORDER BY id DESC';
+    $stmt = $connexion->prepare($query);
+    $stmt->execute();
+    return $stmt;
+}
