@@ -20,6 +20,24 @@
             }
         });
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        const avatarInput = document.querySelector('input[name="avatar"]');
+        const avatarPreview = document.getElementById('imagePreview');
+
+        avatarInput.addEventListener('change', function () {
+            if (avatarInput.files && avatarInput.files[0]) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    avatarPreview.src = e.target.result;
+                    avatarPreview.style.display = 'block';
+                };
+
+                reader.readAsDataURL(avatarInput.files[0]);
+            }
+        });
+    });
 </script>
     </body>
 </html>

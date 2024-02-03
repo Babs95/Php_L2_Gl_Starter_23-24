@@ -19,7 +19,7 @@ require('actions/services/searchServiceAction.php');
         </div>
       </div>
     </form>
-
+    <?php print_r($_SERVER['DOCUMENT_ROOT'])?>
     <br>
     <div class="container text-center">
       <div class="row">

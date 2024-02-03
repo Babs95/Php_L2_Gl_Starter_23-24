@@ -17,6 +17,11 @@
           <li class="nav-item">
             <a class="nav-link <?php echo !empty($service) ? "active" : "" ?>" href="/views/services/services.php">Services</a>
           </li>
+          <?php if($_SESSION['profil'] == 1): ?>
+          <li class="nav-item">
+            <a class="nav-link <?php echo !empty($user) ? "active" : "" ?>" href="/views/users/users.php">Utilisateurs</a>
+          </li>
+          <?php endif ?>
         </ul>
         <a class="btn btn-outline-success" type="submit" href="/actions/auth/logoutAction.php">
           Se Déconnecter
